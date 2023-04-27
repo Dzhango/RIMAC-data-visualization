@@ -3,30 +3,41 @@
 <head>
     <title>Rimac People Viz</title>
     <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+    <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <header>
+    <header class="navy-font margin-bottom">
         <h1>RIMAC People Visualization</h1>
     </header>
-    <main>
-        <div id="sidebar">
-            <label for="cars">Choose floor:</label>
-            <select id="cars">
-                <option value="volvo">Volvo</option>
-                <option value="saab">Saab</option>
-                <option value="opel">Opel</option>
-                <option value="audi">Audi</option>
-            </select>
-        </div>
-        <div id="interface-container">
-            <div id="interface">
-                <!-- TODO: replace with canvas element -->
-                <div id="canvas"></div>
-                <input id="slider" type="range" min="0" max="1000" value="0">
+    <main class="flex-horizontal">
+        <section class="flex-vertical">
+            <div>
+                <label for="cars">Choose floor:</label><br>
+                <select id="cars">
+                    <option value="volvo">1st floor</option>
+                    <option value="saab">2nd floor</option>
+                    <option value="opel">3rd floor</option>
+                    <option value="audi">4th floor</option>
+                    <option value="saab">Annex-1st</option>
+                    <option value="opel">Annex-2nd</option>
+                    <option value="audi">Annex-lower-level</option>
+                </select>
             </div>
-        </div>
+            <div>
+                <form action="/" method="POST">
+                    <label for="date">Date:</label><br>
+                    <input type="date" name="date" id="date">
+                </form>
+            </div>
+        </section>
+        <section id="heatmap">
+            <div>
+                <canvas id="myCanvas"></canvas>
+            </div>
+            <input id="slider" type="range" min="0" max="1000" value="0">
+        </section>
     </main>
     <footer></footer>
 </body>

@@ -1,4 +1,89 @@
+/* Styled according to CUBE CSS (https://cube.fyi/)
+
+    0. Variables
+    1. Global Styles
+    2. Composition
+    3. Utilities
+    4. Blocks
+    5. Exceptions
+
+
+    Note about colors: classic UCSD - Navy, Blue, Yellow, White
+    from https://brand.ucsd.edu/visual-brand/color/index.html
+*/
+
+
+/* 0. Variables */
+
+:root {
+    --font-size: 16px;
+    --bold-font: 700;
+    /* UCSD colors */
+    --ucsd-blue: #00629B;
+    --ucsd-navy: #182B49;
+    --ucsd-yellow: #FFCD00;
+    --ucsd-gold: #C69214;
+    /* Neutrals */
+    --black: #000000;
+    --white: #FFFFFF;
+    --gray: #747678;
+}
+
+
+/* 1. Global Styles */
+
 body {
+    font-family: 'Inter';
+    font-size: var(--font-size);
+    background-color: var(--white);
+    color: var(--black);
+    margin: 1rem;
+}
+
+
+/* 2. Composition */
+
+.flex-horizontal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 5rem;
+}
+
+.flex-vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 20rem;
+}
+
+
+/* 3. Utilities */
+
+.gold-background {
+    background-color: var(--ucsd-gold);
+}
+
+.navy-font {
+    color: var(--ucsd-navy);
+}
+
+.margin-bottom {
+    margin-bottom: 1rem
+}
+
+
+/* 4. Blocks */
+
+canvas {
+    min-width: 50rem;
+    background-image: url(./maps/3rd-floor.png);
+    background-size: 100% 100%;
+    border: 1px solid var(--ucsd-navy);
+}
+
+
+/* body {
     font-family: 'Inter';
     margin: auto;
 }
@@ -36,7 +121,7 @@ main {
     grid-template-rows: 7fr 1fr;
 }
 
-#interface > * {
+#interface>* {
     margin: 1rem;
 }
 
@@ -48,4 +133,4 @@ main {
     background-color: white;
     width: 90%;
     height: 90%;
-}
+} */
