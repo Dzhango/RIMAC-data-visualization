@@ -1,0 +1,51 @@
+body {
+    font-family: 'Inter';
+    margin: auto;
+}
+
+header {
+    background-color: #FFCD00;
+    color: black;
+    height: 10vh;
+    display: flex;
+    padding-left: 1rem;
+}
+
+main {
+    background-color: #182B49;
+    color: white;
+    height: 90vh;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+
+#sidebar {}
+
+#interface-container {
+    padding: 1rem;
+}
+
+#interface {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: #03619B;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-rows: 7fr 1fr;
+}
+
+#interface > * {
+    margin: 1rem;
+}
+
+#slider {
+    width: 90%;
+}
+
+#canvas {
+    background-color: white;
+    width: 90%;
+    height: 90%;
+}
