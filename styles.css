@@ -1,25 +1,41 @@
 body {
-    font-family: 'Inter';
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
     margin: auto;
 }
 
 header {
     background-color: #FFCD00;
-    color: black;
-    height: 10vh;
+    color: #182B49;
+    height: 10%;
     display: flex;
+    font-weight: 400;
     padding-left: 1rem;
+    justify-content: center;
 }
 
 main {
     background-color: #182B49;
     color: white;
-    height: 90vh;
+    height: 90%;
     display: grid;
     grid-template-columns: 1fr 3fr;
 }
 
-#sidebar {}
+#sidebar-container {
+    padding: 1rem;
+}
+
+#sidebar-box{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: #03619B;
+}
+
+#sidebar{
+    padding: 1rem;
+}
 
 #interface-container {
     padding: 1rem;
@@ -30,10 +46,10 @@ main {
     height: 100%;
     border-radius: 10px;
     background-color: #03619B;
-    display: grid;
+    display: flex;
+    flex-direction: column;
     justify-items: center;
     align-items: center;
-    grid-template-rows: 7fr 1fr;
 }
 
 #interface > * {
@@ -42,10 +58,13 @@ main {
 
 #slider {
     width: 90%;
+    accent-color: #FFCD00;
+}
+
+#floorImage {
+    height: 60vh;
 }
 
 #canvas {
     background-color: white;
-    width: 90%;
-    height: 90%;
 }
