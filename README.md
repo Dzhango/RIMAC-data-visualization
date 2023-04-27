@@ -9,12 +9,16 @@ This project is aimed to provide useful visualizations of RIMAC gym visitors at 
 
 
 ## Getting Started
-Click [here](quora.com/profile/Ashish-Kulkarni-100) for current prod version.
+Click [here](https://dzhango.github.io/RIMAC-data-visualization/) for current prod version.
 
 ## For developers
 
 Prod branch would have most recent updates, hosted on github pages.\
 Live branch is protected(need PR + 1 review to push) - hosting TBD.
+
+## Adopted Convetions
+
+TBD
 
 ## Authors
 
