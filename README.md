@@ -9,11 +9,13 @@ This project is aimed to provide useful visualizations of RIMAC gym visitors at 
 
 
 ## Getting Started
-Click [here](https://dzhango.github.io/RIMAC-data-visualization/) for current prod version.
+[![Netlify Status](https://api.netlify.com/api/v1/badges/f1c95717-bd9a-4394-a584-a421c2c95dae/deploy-status)](https://app.netlify.com/sites/effortless-licorice-b5ddb3/deploys)\
+Click [here](https://effortless-licorice-b5ddb3.netlify.app/) for current prod version.
 
 ## For developers
 
-Prod branch would have most recent updates, hosted on github pages.\
+Pull requests have deploy previews. Please make sure nothing is broken on prod before merging.\
+Prod branch would have most recent updates, hosted on Netlify.\
 Live branch is protected(need PR + 1 review to push) - hosting TBD.
 
 ### System Design
