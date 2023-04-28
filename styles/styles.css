@@ -40,7 +40,7 @@ body {
     margin: 0px;
 }
 
-body > * {
+body>* {
     padding: 1rem;
 }
 
@@ -101,6 +101,7 @@ body > * {
     gap: 1rem;
 }
 
+/* Slider CSS taken from https://www.w3schools.com/howto/howto_js_rangeslider.asp */
 #slider {
     width: 100%;
 }
@@ -114,27 +115,27 @@ body > * {
     opacity: 0.7;
     -webkit-transition: .2s;
     transition: opacity .2s;
-  }
-  
-  #slider:hover {
+}
+
+#slider:hover {
     opacity: 1;
-  }
-  
-  #slider::-webkit-slider-thumb {
+}
+
+#slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
     width: 25px;
     height: 25px;
     background: var(--ucsd-yellow);
     cursor: pointer;
-  }
-  
-  #slider::-moz-range-thumb {
+}
+
+#slider::-moz-range-thumb {
     width: 25px;
     height: 25px;
     background: var(--ucsd-yellow);
     cursor: pointer;
-  }
+}
 
 canvas {
     min-width: 70vw;
