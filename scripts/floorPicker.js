@@ -13,7 +13,7 @@ function handleChange(e) {
     // load image into canvas
     const optionValue = e.target.value;
     const canvas = document.querySelector("canvas");
-    canvas.style.backgroundImage = `url('../maps/${optionValue}.png')`;
+    canvas.style.backgroundImage = `url('maps/${optionValue}.png')`;
 
     // remove event listeners 
     e.target.removeEventListener("change", handleChange);
