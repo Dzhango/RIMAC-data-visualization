@@ -16,9 +16,14 @@ Click [here](https://dzhango.github.io/RIMAC-data-visualization/) for current pr
 Prod branch would have most recent updates, hosted on github pages.\
 Live branch is protected(need PR + 1 review to push) - hosting TBD.
 
+### System Design
+
+<img src="./docs/diagram.png">
+
+
 ## Adopted Convetions
 
-TBD
+CUBE CSS - naming convention
 
 ## Authors
 
