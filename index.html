@@ -9,7 +9,7 @@
 
 <body>
     <script src="scripts/index.js" defer type="module"></script>
-    <header class="navy-font margin-bottom">
+    <header class="navy-font yellow-background margin-bottom">
         <h1>RIMAC Population Visualization</h1>
     </header>
     <main class="flex-horizontal">
@@ -34,11 +34,12 @@
                 </form>
             </div>
         </section>
-        <section id="heatmap">
+        <section id="heatmap" class="blue-background">
             <div>
                 <canvas id="myCanvas"></canvas>
             </div>
-            <input id="slider" type="range" min="0" max="1000" value="0">
+            <input id="slider" type="range" min="0" max="1440" value="0">
+            <span>00:00 / 24:00</span>
         </section>
     </main>
     <footer></footer>
