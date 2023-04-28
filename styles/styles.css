@@ -72,6 +72,10 @@ body {
     margin-bottom: 1rem
 }
 
+.full-width {
+    width: 100%;
+}
+
 
 /* 4. Blocks */
 
