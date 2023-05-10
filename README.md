@@ -32,6 +32,7 @@ CUBE CSS - naming convention
 Contributors names and contact info (feel free to add your name below)
 
 Dzhangir Bayandarov
+Grant Cheng
 ...
 
 ## License
