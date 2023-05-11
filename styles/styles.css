@@ -35,9 +35,13 @@
 body {
     font-family: 'Inter';
     font-size: var(--font-size);
-    background-color: var(--white);
-    color: var(--black);
-    margin: 1rem;
+    background-color: var(--ucsd-navy);
+    color: var(--white);
+    margin: 0px;
+}
+
+body>* {
+    padding: 1rem;
 }
 
 
@@ -64,8 +68,20 @@ body {
     background-color: var(--ucsd-gold);
 }
 
+.yellow-background {
+    background-color: var(--ucsd-yellow);
+}
+
+.blue-background {
+    background-color: var(--ucsd-blue);
+}
+
 .navy-font {
     color: var(--ucsd-navy);
+}
+
+.white-font {
+    color: var(--white);
 }
 
 .margin-bottom {
@@ -82,6 +98,52 @@ body {
 
 
 /* 4. Blocks */
+
+#heatmap {
+    padding: 1rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Slider CSS taken from https://www.w3schools.com/howto/howto_js_rangeslider.asp */
+#slider {
+    width: 100%;
+}
+
+#slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 25px;
+    background: var(--white);
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+#slider:hover {
+    opacity: 1;
+}
+
+#slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: var(--ucsd-yellow);
+    cursor: pointer;
+}
+
+#slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: var(--ucsd-yellow);
+    cursor: pointer;
+}
 
 canvas {
     min-width: 60rem;
