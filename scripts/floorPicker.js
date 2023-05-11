@@ -1,3 +1,5 @@
+import canvas from "./canvas.js";
+
 export default function floorPicker() {
     const selectTag = document.querySelector("#floorpicker");
     // when client clicked on select element 
@@ -12,8 +14,11 @@ function handleClick(e) {
 function handleChange(e) {
     // load image into canvas
     const optionValue = e.target.value;
-    const canvas = document.querySelector("canvas");
-    canvas.style.backgroundImage = `url('maps/${optionValue}.png')`;
+    const canv = document.querySelector("canvas");
+    canv.dataset.map = optionValue;
+    canvas();
+
+    // canvas.style.backgroundImage = `url('maps/${optionValue}.png')`;
 
     // remove event listeners 
     e.target.removeEventListener("change", handleChange);
