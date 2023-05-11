@@ -18,8 +18,6 @@ function handleChange(e) {
     canv.dataset.map = optionValue;
     canvas();
 
-    // canvas.style.backgroundImage = `url('maps/${optionValue}.png')`;
-
     // remove event listeners 
     e.target.removeEventListener("change", handleChange);
 }

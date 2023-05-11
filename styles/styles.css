@@ -85,9 +85,6 @@ body {
 
 canvas {
     min-width: 60rem;
-    /* min-height: 30rem; */
-    /* background-image: url(../maps/3rd-floor.png); */
-    /* background-size: 100% 100%; */
     background-color: var(--white);
     border: 1px solid var(--ucsd-navy);
     image-rendering: pixelated;
