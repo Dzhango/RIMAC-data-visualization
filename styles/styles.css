@@ -142,7 +142,7 @@ body>* {
 }
 
 canvas {
-    min-width: 60rem;
+    min-width: 65vw;
     /* min-height: 30rem; */
     background-image: url(../maps/3rd-floor.png);
     background-size: 100% 100%;
