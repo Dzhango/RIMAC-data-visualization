@@ -1,9 +1,12 @@
+import canvas from "./canvas.js";
+
 export default function timeSlider() {
     const timeSlider = document.getElementById("slider");
     const timeDisplay = document.getElementById("time-display");
 
     timeSlider.addEventListener("input", () => {
         timeDisplay.innerText = `${timeConvert(timeSlider.value)} / 23:59`;
+        canvas()
     })
 }
 
@@ -13,4 +16,3 @@ const timeConvert = (val) => {
     const minutes = `${val % 60}`;
     return `${hours.padStart(2, "0")}:${minutes.padStart(2, "0")}`;
 }
-

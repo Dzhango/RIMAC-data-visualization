@@ -9,6 +9,7 @@ const MAP_DATA = {
             X: { x: 755.7, y: 172.4 },
             M: { x: 700, y: 555 }
         }
+
     },
     "2nd-floor": {
         id: "2nd-floor-map",
@@ -38,7 +39,29 @@ const MAP_DATA = {
             Q: { x: 228.7, y: 470.6 },
             R: { x: 207.3, y: 160.3 },
             V: { x: 34.64, y: 297.9 }
-        }
+        },
+        coordinates: [
+            [225, 278],
+            [265, 298],
+            [294, 289],
+            [272, 334],
+            [237, 270],
+            [247, 323],
+            [283, 275],
+            [254, 318],
+            [268, 269],
+            [276, 305],
+            [292, 329],
+            [228, 303],
+            [243, 288],
+            [260, 332],
+            [288, 279],
+            [233, 318],
+            [241, 264],
+            [279, 331],
+            [297, 272],
+            [250, 298],
+        ]
     },
     "4th-floor": {
         id: "4th-floor-map",
@@ -107,8 +130,6 @@ export default function canvas() {
     var ctx = c.getContext("2d");
 
     const { width, height } = c.getBoundingClientRect();
-    ctx.canvas.width = width;
-    ctx.canvas.height = height;
 
     const mapName = c.dataset.map;
     const mapData = MAP_DATA[mapName];
@@ -126,4 +147,27 @@ export default function canvas() {
         ctx.arc(devx, devy, 5, 0, 2 * Math.PI);
         ctx.fill();
     }
+
+    ctx.fillStyle = "rgba(0,255,0,0.25)";
+    // ctx.fillStyle = "#0f0"
+
+    MAP_DATA['3rd-floor'].coordinates.forEach(coord => {
+        console.log(coord[0], coord[1])
+        const [coordx, coordy] = convertCoords(coord[0], coord[1], mapData.ox, mapData.oy, mapData.width, mapData.height, width, height);
+
+        ctx.beginPath();
+        ctx.arc(coordx, coordy, 25, 0, 2 * Math.PI);
+        ctx.fill();
+    })
+}
+
+export function initCanvas() {
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+
+    const { width, height } = c.getBoundingClientRect();
+    ctx.canvas.width = width;
+    ctx.canvas.height = height;
+
+    return [width, height]
 }
