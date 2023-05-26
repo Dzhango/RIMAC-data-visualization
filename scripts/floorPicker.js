@@ -18,6 +18,7 @@ function handleChange(e) {
     const canv = document.querySelector("canvas");
     canv.dataset.map = optionValue;
     canvas();
+    console.log(fetchData());
     // remove event listeners 
     e.target.removeEventListener("change", handleChange);
 }
