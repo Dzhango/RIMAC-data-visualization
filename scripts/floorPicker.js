@@ -1,4 +1,5 @@
 import canvas from "./canvas.js";
+import {fetchData} from "./fetch.js";
 
 export default function floorPicker() {
     const selectTag = document.querySelector("#floorpicker");
@@ -17,7 +18,6 @@ function handleChange(e) {
     const canv = document.querySelector("canvas");
     canv.dataset.map = optionValue;
     canvas();
-
     // remove event listeners 
     e.target.removeEventListener("change", handleChange);
 }
