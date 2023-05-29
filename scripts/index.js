@@ -10,6 +10,7 @@ function init() {
     floorPicker();
     timeSlider();
     canvas();
+    heatmap()
 }
 
 
