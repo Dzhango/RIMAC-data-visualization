@@ -32,7 +32,7 @@ export function fetchData(){
     let date = getDate();
     let promise = new Promise(async (resolve, reject) =>{
         try{
-            const response = await fetch(`http://cse191.ucsd.edu/api/get-floor-data?floor=${floor}&date=${date}`, {mode: 'cors'});
+            const response = await fetch(`http://cse191.ucsd.edu/api/get-floor-data?floor=TEST+FLOOR+${floor}&date=${date}`, {mode: 'cors'});
             if (!response.ok){
                 throw new Error('Request failed with status' + response.status);
             }
