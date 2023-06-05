@@ -11,8 +11,7 @@ function init() {
     floorPicker();
     datePicker();
     timeSlider();
-    canvas();
-    heatmap()
+    canvas()
 }
 
 
