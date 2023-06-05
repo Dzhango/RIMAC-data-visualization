@@ -1,3 +1,5 @@
+import mock from "./mock.js";
+
 const MAP_DATA = {
     "1st-floor": {
         id: "1st-floor-map",

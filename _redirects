@@ -1,0 +1,2 @@
+/api/* http://cse191.ucsd.edu/api/:splat 200!
+http://cse191.ucsd.edu/api/get-floor-data?floor_name=${floor}&date=${date}

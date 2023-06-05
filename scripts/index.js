@@ -3,6 +3,7 @@ import datePicker from "./datePicker.js";
 import timeSlider from "./timeSlider.js";
 import canvas from "./canvas.js";
 
+
 document.addEventListener("DOMContentLoaded", init);
 
 function init() {
