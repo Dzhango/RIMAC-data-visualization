@@ -3,7 +3,7 @@ function getDate(){
     let value = selectTag.value;
     let inputDate = new Date(value);
     let adjustedDate = new Date(inputDate.getTime() + inputDate.getTimezoneOffset() * 60000);
-    return adjustedDate.valueOf();
+    return inputDate.valueOf();
 }
 
 function getFloor(){
@@ -32,8 +32,8 @@ export function fetchData(){
     let date = getDate();
     let promise = new Promise(async (resolve, reject) =>{
         try{
-            console.log(`//cse191.ucsd.edu/api/get-floor-data?floor=${floor}&date=${date}`);
-            const response = await fetch(`//cse191.ucsd.edu/api/get-floor-data?floor=${floor}&date=${date}`, {mode: 'cors'});
+            console.log(`http://cse191.ucsd.edu/api/get-floor-data?floor_name=${floor}&date=${date}`);
+            const response = await fetch(`http://cse191.ucsd.edu/api/get-floor-data?floor_name=${floor}&date=${date}`, {mode: 'cors'});
             if (!response.ok){
                 throw new Error('Request failed with status' + response.status);
             }
