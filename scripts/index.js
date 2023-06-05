@@ -12,6 +12,7 @@ function init() {
     datePicker();
     timeSlider();
     canvas();
+    heatmap()
 }
 
 
