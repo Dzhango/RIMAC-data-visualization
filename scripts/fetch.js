@@ -11,19 +11,19 @@ function getFloor(){
     console.log(selectTag);
     let value = selectTag.value;
     if (value === "1st-floor"){
-        return 1;
+        return "RIMAC+1st+Floor";
     }else if (value === "2nd-floor"){
-        return 2;
+        return "RIMAC+2nd+Floor";
     }else if (value === "3rd-floor"){
-        return 3;
+        return "RIMAC+3rd+Floor";
     }else if (value === "4th-floor"){
-        return 4;
+        return "RIMAC+4th+Floor";
     }else if (value === "Annex-1st"){
-        return 5;
+        return "Annex+1st+Floor";
     }else if (value === "Annex-2nd"){
-        return 6;
+        return "Annex+2nd+Floor";
     }else if (value === "Annex-lower-level"){
-        return 7;
+        return "Annex+Lower+Floor";
     }
 }
 
@@ -32,7 +32,8 @@ export function fetchData(){
     let date = getDate();
     let promise = new Promise(async (resolve, reject) =>{
         try{
-            const response = await fetch(`http://cse191.ucsd.edu/api/get-floor-data?floor=${floor}&date=${date}`, {mode: 'cors'});
+            console.log(`//cse191.ucsd.edu/api/get-floor-data?floor=${floor}&date=${date}`);
+            const response = await fetch(`//cse191.ucsd.edu/api/get-floor-data?floor=${floor}&date=${date}`, {mode: 'cors'});
             if (!response.ok){
                 throw new Error('Request failed with status' + response.status);
             }
