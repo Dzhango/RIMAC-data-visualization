@@ -1,9 +1,9 @@
-function getDate(){
+export function getDate(){
     const selectTag = document.querySelector('input[type="date"]');
     let value = selectTag.value;
     let inputDate = new Date(value);
     let adjustedDate = new Date(inputDate.getTime() + inputDate.getTimezoneOffset() * 60000);
-    return inputDate.valueOf();
+    return adjustedDate.valueOf();
 }
 
 function getFloor(){
