@@ -45,8 +45,12 @@ export function fetchData(){
     });
     promise
         .then(result =>{
-            console.log(result);
-            return result;
+            try{
+                console.log(JSON.parse(result));
+            }catch(error){
+                console.log("Server did not give a valid response");
+            }
+            return JSON.parse(result);
         })
         .catch(error =>{
             console.error(error);

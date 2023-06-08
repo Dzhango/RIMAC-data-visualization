@@ -103,7 +103,7 @@
             <div>
                 <form action="/" method="POST">
                     <label for="date">Date:</label><br>
-                    <input type="date" name="date" id="date">
+                    <input type="date" name="date" id="date" min="2023-05-08" max="2023-05-31">
                     <input type="submit" value="Submit" disabled>
                 </form>
             </div>
@@ -120,7 +120,7 @@
                 <canvas data-map="3rd-floor" id="myCanvas"></canvas>
             </div>
             <div class="full-width">
-                <input id="slider" type="range" min="0" max="1339" value="0" step="30">
+                <input id="slider" type="range" min="0" max="1339" value="0" step="5">
                 <span id="time-display">00:00 / 23:59</span>
             </div>
         </section>
