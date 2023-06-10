@@ -203,19 +203,22 @@ const Sample_Data = {
  * @param {float} ch The height of the canvas
  * @returns Returns a 2-tuple of the new x and y coordinates in canvas terms
  */
-function convertCoords(x, y, ox, oy, mw, mh, cw, ch) {
+export function convertCoords(x, y, ox, oy, mw, mh, cw, ch) {
     let scale = ch / mh;
     let centerOffset = (cw - mw * scale) / 2;
     return [(x - ox + mw / 2) * scale + centerOffset, -(y - oy - mh / 2) * scale];
 }
 
+export const { width, height } = document.getElementById("myCanvas").getBoundingClientRect();
+
 export default function canvas() {
     var c = document.getElementById("myCanvas");
     var ctx = c.getContext("2d");
 
-    const { width, height } = c.getBoundingClientRect();
+    //const { width, height } = c.getBoundingClientRect();
     ctx.canvas.width = width;
     ctx.canvas.height = height;
+    
 
     const mapName = c.dataset.map;
     const mapData = MAP_DATA[mapName];
@@ -258,25 +261,11 @@ export default function canvas() {
         }
     }
 
-    function drawPoints() {
-        ctx.fillStyle = heatmapOn ? 'rgba(0, 0, 255, 0.3)' : 'rgba(0, 0, 255, 1)'; // semi-transparent blue or solid blue based on the heatmap state
-        const radius = heatmapOn ? 40 : 5; // larger radius for heatmap mode
-
-        for (let devName in samplePoint.points) {
-            const device = samplePoint.points[devName];
-            const [devx, devy] = convertCoords(device.x, device.y, samplePoint.ox, samplePoint.oy, samplePoint.width, samplePoint.height, width, height);
-    
-            ctx.beginPath();
-            ctx.arc(devx, devy, radius, 0, 2 * Math.PI);
-            ctx.fill();
-        }
-    }
 
     function redrawCanvas() {
         ctx.clearRect(0, 0, width, height); // clear the canvas
         drawMap(); // redraw the map
         drawRedPoints(); // redraw the red points
-        drawPoints(); // redraw the points
     }
 
     // Initially draw the canvas
