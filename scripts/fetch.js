@@ -8,6 +8,7 @@ export function getDate(){
     return adjustedDate.valueOf();
 }
 
+
 function getFloor(){
     const selectTag = document.querySelector("#floorpicker");
     console.log(selectTag);

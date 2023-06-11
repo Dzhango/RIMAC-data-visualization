@@ -92,9 +92,10 @@ export default function timeSlider(slicedData, data) {
         timeDisplay.innerText = `${timeConvert(timeSlider.value)} / 23:00`;
         let date = new Date(getDate());
 	    //console.log(date);
-	    const hours = Math.floor(timeSlider.value / 60);
+	    const hours = Math.floor((timeSlider.value - 420) / 60);
 	    const minutes = timeSlider.value % 60;
 	    let time = new Date(date.getFullYear(), date.getMonth(), date.getDate(), hours, minutes);
+        console.log(time.valueOf());
         //console.log(data);
         drawPoints(slicedData, data, time.valueOf());
     })
