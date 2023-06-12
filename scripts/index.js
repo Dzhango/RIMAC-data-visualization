@@ -6,13 +6,8 @@ document.addEventListener("DOMContentLoaded", init);
 
 function init() {
     console.log("DOM loaded");
-    // deploy different components
     floorPicker();
     datePicker();
-    //timeSlider();
     canvas();
     fetchData();
 }
-
-
-// helper functions go here
