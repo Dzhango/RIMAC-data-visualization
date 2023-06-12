@@ -87,7 +87,7 @@ const MAP_DATA = {
 export default function timeSlider(slicedData, data) {
     const timeSlider = document.getElementById("slider");
     const timeDisplay = document.getElementById("time-display");
-    //var store = 0;
+    var store = 0;
     timeSlider.addEventListener("input", () => {
         timeDisplay.innerText = `${timeConvert(timeSlider.value)} / 23:00`;
         let date = new Date(getDate());
@@ -95,14 +95,11 @@ export default function timeSlider(slicedData, data) {
 	    const hours = Math.floor((timeSlider.value - 420) / 60);
 	    const minutes = timeSlider.value % 60;
 	    let time = new Date(date.getFullYear(), date.getMonth(), date.getDate(), hours, minutes);
-        //console.log(time.valueOf());
-        //console.log(data);
-        //store = time.valueOf();
-        print("value" + time.valueOf());
-        draw(slicedData, data, time.valueOf());
-        
+        store = time.valueOf();
+        draw(slicedData, data, store);
     })
-    //draw(slicedData, data, store);
+    
+    
 }
 
 const timeConvert = (val) => {
@@ -119,8 +116,14 @@ function draw(sliceData, data, time) {
     ctx.canvas.height = height;
     canvas();
     var heatmapOn = document.getElementById('mySwitch').checked;
+    const mySwitch = document.getElementById('mySwitch');
 
-    ctx.fillStyle = heatmapOn ? 'rgba(255, 178, 100, 0.23)' : 'rgba(255, 178, 100, 0.8)'; // semi-transparent blue or solid blue based on the heatmap state
+    mySwitch.addEventListener('change', function() {
+        draw(sliceData, data, time);
+    });
+
+
+    ctx.fillStyle = heatmapOn ? 'rgba(255, 200, 130, 0.23)' : 'rgba(255, 200, 130, 0.8)'; // semi-transparent blue or solid blue based on the heatmap state
     const radius = heatmapOn ? 25 : 5; 
     let floor = data['floor_name'][0];
     let floorInfo = MAP_DATA[floor];
