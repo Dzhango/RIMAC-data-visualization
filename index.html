@@ -1,77 +1,3 @@
-<!-- <html>
-
-<head>
-    <title>Rimac Data Visualizer</title>
-    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
-    <link rel="stylesheet" href="./styles/reset.css">
-    <link rel="stylesheet" href="./styles/styles.css">
-</head>
-
-<body>
-    <script src="scripts/index.js" defer type="module"></script>
-    <header class="navy-font yellow-background margin-bottom">
-        <h1>RIMAC Population Visualization</h1>
-    </header>
-    <main class="flex-horizontal">
-        <section class="flex-vertical">
-            <div>
-                <label for="floorpicker">Choose floor:</label><br>
-                <select id="floorpicker" name="floorpicker">
-                    <option value="1st-floor">1st floor</option>
-                    <option value="2nd-floor">2nd floor</option>
-                    <option value="3rd-floor" selected="selected">3rd floor</option>
-                    <option value="4th-floor">4th floor</option>
-                    <option value="Annex-1st">Annex-1st</option>
-                    <option value="Annex-2nd">Annex-2nd</option>
-                    <option value="Annex-lower-level">Annex-lower-level</option>
-                </select>
-            </div>
-            <div>
-                <form action="/" method="POST">
-                    <label for="date">Date:</label><br>
-                    <input type="date" name="date" id="date">
-                    <input type="submit" value="Submit" disabled>
-                </form>
-            </div>
-            <div>
-                <form>
-                    <label for="visualization">Choose visualization:</label><br>
-                    <input type="radio" id="datapoint" name="visualization" value="datapoint">
-                    <label for="datapoint">Data Point</label>
-                    <input type="radio" id="heatmap" name="visualization" value="heatmap" checked>
-                    <label for="heatmap">Heatmap</label>
-                </form>
-            </div>
-        </section>
-        <section id="heatmap" class="blue-background">
-            <div class="margin-bottom">
-                <canvas data-map="3rd-floor" id="myCanvas"></canvas>
-            </div>
-            <div class="full-width">
-                <input id="slider" type="range" min="0" max="1339" value="0">
-                <span id="time-display">00:00 / 23:59</span>
-            </div>
-        </section>
-        <img src="maps/1st-floor.png" id="1st-floor-map" class="hidden">
-        <img src="maps/2nd-floor.png" id="2nd-floor-map" class="hidden">
-        <img src="maps/3rd-floor.png" id="3rd-floor-map" class="hidden">
-        <img src="maps/4th-floor.png" id="4th-floor-map" class="hidden">
-        <img src="maps/Annex-1st.png" id="annex-1st-map" class="hidden">
-        <img src="maps/Annex-2nd.png" id="annex-2nd-map" class="hidden">
-        <img src="maps/Annex-lower-level.png" id="annex-lower-map" class="hidden">
-    </main>
-    <footer></footer>
-</body>
-
-</html> -->
-
-
-
-
-
-
-
-
 <html>
 
 <head>
@@ -83,7 +9,6 @@
 
 <body>
     <script src="scripts/index.js" defer type="module"></script>
-    <script src="https://cdn.jsdelivr.net/npm/heatmap.js/build/heatmap.min.js"></script>
     <header class="navy-font yellow-background margin-bottom">
         <h1>RIMAC Population Visualization</h1>
     </header>
@@ -95,7 +20,6 @@
                     <option value="1st-floor">1st floor</option>
                     <option value="2nd-floor">2nd floor</option>
                     <option value="3rd-floor" selected="selected">3rd floor</option>
-                    <option value="4th-floor">4th floor</option>
                     <option value="Annex-1st">Annex-1st</option>
                     <option value="Annex-2nd">Annex-2nd</option>
                     <option value="Annex-lower-level">Annex-lower-level</option>
@@ -128,13 +52,10 @@
         <img src="maps/1st-floor.png" id="1st-floor-map" class="hidden">
         <img src="maps/2nd-floor.png" id="2nd-floor-map" class="hidden">
         <img src="maps/3rd-floor.png" id="3rd-floor-map" class="hidden">
-        <img src="maps/4th-floor.png" id="4th-floor-map" class="hidden">
         <img src="maps/Annex-1st.png" id="annex-1st-map" class="hidden">
         <img src="maps/Annex-2nd.png" id="annex-2nd-map" class="hidden">
         <img src="maps/Annex-lower-level.png" id="annex-lower-map" class="hidden">
     </main>
     <footer></footer>
-
-    <!-- Some other parts of your HTML file -->
 </body>
 </html>

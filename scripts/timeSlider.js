@@ -87,7 +87,7 @@ const MAP_DATA = {
 export default function timeSlider(slicedData, data) {
     const timeSlider = document.getElementById("slider");
     const timeDisplay = document.getElementById("time-display");
-
+    //var store = 0;
     timeSlider.addEventListener("input", () => {
         timeDisplay.innerText = `${timeConvert(timeSlider.value)} / 23:00`;
         let date = new Date(getDate());
@@ -95,10 +95,14 @@ export default function timeSlider(slicedData, data) {
 	    const hours = Math.floor((timeSlider.value - 420) / 60);
 	    const minutes = timeSlider.value % 60;
 	    let time = new Date(date.getFullYear(), date.getMonth(), date.getDate(), hours, minutes);
-        console.log(time.valueOf());
+        //console.log(time.valueOf());
         //console.log(data);
-        drawPoints(slicedData, data, time.valueOf());
+        //store = time.valueOf();
+        print("value" + time.valueOf());
+        draw(slicedData, data, time.valueOf());
+        
     })
+    //draw(slicedData, data, store);
 }
 
 const timeConvert = (val) => {
@@ -108,16 +112,16 @@ const timeConvert = (val) => {
     return `${hours.padStart(2, "0")}:${minutes.padStart(2, "0")}`;
 }
 
-function drawPoints(sliceData, data, time) {
+function draw(sliceData, data, time) {
     var c = document.getElementById("myCanvas");
     var ctx = c.getContext("2d");
     ctx.canvas.width = width;
     ctx.canvas.height = height;
     canvas();
-    //ctx.fillStyle = heatmapOn ? 'rgba(0, 0, 255, 0.3)' : 'rgba(0, 0, 255, 1)'; // semi-transparent blue or solid blue based on the heatmap state
-    //const radius = heatmapOn ? 40 : 5; // larger radius for heatmap mode
-    ctx.fillStyle = 'rgba(0, 0, 255, 0.15)';
-    const radius = 20;
+    var heatmapOn = document.getElementById('mySwitch').checked;
+
+    ctx.fillStyle = heatmapOn ? 'rgba(255, 178, 100, 0.23)' : 'rgba(255, 178, 100, 0.8)'; // semi-transparent blue or solid blue based on the heatmap state
+    const radius = heatmapOn ? 25 : 5; 
     let floor = data['floor_name'][0];
     let floorInfo = MAP_DATA[floor];
     for (let i in sliceData[time.valueOf()]){

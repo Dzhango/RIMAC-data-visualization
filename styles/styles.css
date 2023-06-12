@@ -150,6 +150,7 @@ canvas {
     background-color: var(--white);
     border: 1px solid var(--ucsd-navy);
     image-rendering: pixelated;
+
 }
 
 /* The switch - the box around the slider */
@@ -204,6 +205,7 @@ input:checked + .slider:before {
     border-radius: 50%;
 }
 
-
+#myCanvas {
+}
 
 /* 5. Exceptions */
